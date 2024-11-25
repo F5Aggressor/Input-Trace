@@ -7,7 +7,7 @@ const routes: Routes = [
   // Lazy load Auth Module for login
   {
     path: 'login',
-    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule),
+    loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule),
   },
   
   // Lazy load User Dashboard with guards
