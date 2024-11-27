@@ -105,3 +105,24 @@ input, textarea {
   flex: 1;
   padding: 10px;
 }
+
+// Full-Page Background
+.homepage-background {
+    background-color: #ccc; // Fallback color
+    background-image: url('/assets/images/home_background.jpg'); // Correct Angular-relative path
+    background-size: cover; // Ensure the image covers the entire area
+    background-position: center; // Center the image
+    background-repeat: no-repeat; // Prevent tiling
+    height: 100vh; // Full viewport height
+    width: 100vw; // Full viewport width
+  }
+  
+  // Overlay Content (Optional)
+  .homepage-content {
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background for readability
+    border-radius: 8px;
+  }
+  
