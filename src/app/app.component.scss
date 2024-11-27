@@ -1,0 +1,107 @@
+// Variables
+$black: #000000;
+$dark-gray: #2e2e2e;
+$gray: #808080;
+$light-gray: #d3d3d3;
+$white: #ffffff;
+$accent-red: #b22222; // Minimal red accent
+
+// Typography
+$font-family: 'Arial', sans-serif;
+$base-font-size: 16px;
+$line-height: 1.5;
+
+// Global Styles
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  line-height: $line-height;
+  color: $gray;
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $gray;
+  text-decoration: none;
+  &:hover {
+    color: $accent-red;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $black;
+  margin-bottom: 0.5em;
+}
+
+// Buttons
+button, .button {
+  background-color: $dark-gray;
+  color: $white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: $base-font-size;
+  cursor: pointer;
+  &:hover {
+    background-color: $accent-red;
+  }
+}
+
+// Inputs
+input, textarea {
+  background-color: $light-gray;
+  border: 1px solid $gray;
+  color: $dark-gray;
+  padding: 8px;
+  border-radius: 4px;
+  &:focus {
+    border-color: $accent-red;
+    outline: none;
+  }
+}
+
+// Minimal Red Accent Class
+.accent-red {
+  color: $accent-red;
+}
+
+// Utility Classes
+.text-dark {
+  color: $dark-gray !important;
+}
+
+.text-light {
+  color: $light-gray !important;
+}
+
+.bg-dark {
+  background-color: $dark-gray !important;
+}
+
+.bg-light {
+  background-color: $light-gray !important;
+}
+
+.border-red {
+  border: 1px solid $accent-red;
+}
+
+// Grid (Optional)
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.col {
+  flex: 1;
+  padding: 10px;
+}
