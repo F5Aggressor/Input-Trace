@@ -11,16 +11,13 @@ $font-family: 'Arial', sans-serif;
 $base-font-size: 16px;
 $line-height: 1.5;
 
-// Global Styles
-body {
-  font-family: $font-family;
-  font-size: $base-font-size;
-  line-height: $line-height;
-  color: $gray;
-  background-color: $white;
-  margin: 0;
-  padding: 0;
-}
+html, body {
+    margin: 0 !important; /* Override any other styles */
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+  }  
 
 a {
   color: $gray;
@@ -54,7 +51,7 @@ input, textarea {
   background-color: $light-gray;
   border: 1px solid $gray;
   color: $dark-gray;
-  padding: 8px;
+  padding: 0px;
   border-radius: 4px;
   &:focus {
     border-color: $accent-red;
@@ -90,7 +87,6 @@ input, textarea {
 
 // Grid (Optional)
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -103,26 +99,27 @@ input, textarea {
 
 .col {
   flex: 1;
-  padding: 10px;
+  padding: 0px;
 }
 
 // Full-Page Background
-.homepage-background {
-    background-color: #ccc; // Fallback color
-    background-image: url('/assets/images/home_background.jpg'); // Correct Angular-relative path
-    background-size: cover; // Ensure the image covers the entire area
-    background-position: center; // Center the image
-    background-repeat: no-repeat; // Prevent tiling
-    height: 100vh; // Full viewport height
-    width: 100vw; // Full viewport width
+  .homepage-background {
+    position: absolute; /* Ensures the element spans the viewport */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-image: url('/assets/images/home_background.jpg'); /* Background image path */
+    background-size: cover; /* Scale image to cover the area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
   }
   
   // Overlay Content (Optional)
   .homepage-content {
     color: #ffffff;
     text-align: center;
-    padding: 20px;
+    padding: 0px;
     background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background for readability
-    border-radius: 8px;
   }
   
