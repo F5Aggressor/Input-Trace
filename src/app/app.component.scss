@@ -121,5 +121,7 @@ input, textarea {
     text-align: center;
     padding: 0px;
     background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background for readability
+    padding-top: 70px; /* Space for header */
+    padding-bottom: 60px; /* Space for footer */
   }
   

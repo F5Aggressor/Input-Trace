@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e2e2e; /* Dark gray */
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .logo-link {
+    color: #ffffff; /* White text for logo */
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  
+    &:hover {
+      color: #b22222; /* Red accent on hover */
+    }
+  }
+  
+  .header-nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-link {
+    color: #ffffff; /* White links */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
+  
+    &:hover {
+      background-color: rgba(178, 34, 34, 0.8); /* Transparent red background */
+      color: #ffffff;
+    }
+  }
+  

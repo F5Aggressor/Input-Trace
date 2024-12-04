@@ -1,7 +1,17 @@
 <div class="homepage-background">
-    <div class="homepage-content">
-        <app-header></app-header>
-        <button type="button">Hello, working on OIDC integration</button>
-        <app-footer></app-footer>
+  <div class="homepage-content">
+    <!-- Shared Header -->
+    <app-header></app-header>
+  
+    <!-- Dynamic Page Content -->
+    <div class="page-content">
+      <router-outlet></router-outlet>
     </div>
+  
+    <!-- Shared Navbar -->
+    <app-navbar></app-navbar>
+
+    <!-- Shared Footer -->
+    <app-footer></app-footer>
   </div>
+</div>
