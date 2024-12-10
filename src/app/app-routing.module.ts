@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './features/login/login.component';
 
 const routes: Routes = [
-  // Lazy load Auth Module for login
+   // Direct route for Login
   {
     path: 'login',
-    loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule),
+    component: LoginComponent, // Use the LoginComponent directly
   },
   
   // Lazy load User Dashboard with guards

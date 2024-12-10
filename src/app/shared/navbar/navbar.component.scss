@@ -1,68 +1,103 @@
 /* Navbar Container */
 .navbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 10px;
-    z-index: 1000; /* Ensure it's above other content */
+  position: relative; /* Adjusted to position the navbar inside the header */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Hamburger Button */
+.nav-toggle {
+  font-size: 24px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background-color: transparent;
+  border-radius: 5px;
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.1); /* Slight enlarge effect on hover */
   }
-  
-  /* Hamburger Button */
-  .nav-toggle {
-    font-size: 24px;
-    color: #ffffff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 10px;
-    transition: opacity 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
-    border-radius: 5px;
-  
-    &:hover {
-      opacity: 0.8;
-    }
+}
+
+/* Dropdown Menu */
+.nav {
+  position: absolute;
+  top: 100%; /* Ensures it appears just below the navbar */
+  right: 0; /* Aligns the menu to the right edge */
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95); /* Slight offset and shrink when hidden */
+  pointer-events: none; /* Prevent interaction when hidden */
+  transition: all 0.3s ease;
+}
+
+/* Open Menu State */
+.nav.open {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Full size and positioned correctly */
+  pointer-events: auto; /* Enable interaction */
+}
+
+/* Menu Links */
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin: 5px 0;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: rgba(178, 34, 34, 0.8); /* Red hover effect */
   }
-  
-  /* Dropdown Menu */
+}
+
+/* Adjustments for Header Integration */
+.navbar {
+  position: relative; /* Ensure it's positioned inside the header */
+  right: auto; /* Override `fixed` position to avoid floating outside the header */
+}
+
+.nav {
+  top: 50px; /* Keep dropdown inside the blurred header area */
+  right: 10px; /* Align with the navbar toggle */
+  z-index: 2000; /* Ensure it’s above other header content */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Adjust layout for smaller screens */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Expand to full width */
+    padding: 5px;
+  }
+
   .nav {
-    position: absolute;
-    top: 50px; /* Position it slightly below the hamburger button */
-    right: 10px; /* Align to the right */
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    opacity: 0;
-    transform: scale(0.95); /* Shrink slightly when hidden */
-    pointer-events: none; /* Prevent interaction when hidden */
-    transition: all 0.3s ease;
+    position: static; /* Reset to static for better mobile behavior */
+    display: none; /* Hide by default */
   }
-  
-  /* Open Menu State */
+
   .nav.open {
-    opacity: 1;
-    transform: scale(1); /* Full size when visible */
-    pointer-events: auto; /* Enable interaction */
+    display: flex; /* Show dropdown when open */
   }
-  
-  /* Menu Links */
+
   .nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 8px 15px;
-    margin: 5px 0;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-  
-    &:hover {
-      background-color: rgba(178, 34, 34, 0.8); /* Red hover effect */
-    }
+    text-align: center; /* Center-align links */
+    margin: 0; /* Reset margins */
   }
-  
+}

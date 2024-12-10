@@ -7,16 +7,20 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './features/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     OAuthModule.forRoot({
       resourceServer: {
