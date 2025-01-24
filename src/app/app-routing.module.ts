@@ -5,7 +5,7 @@ import { LoginComponent } from './features/login/login.component';
 const routes: Routes = [
    // Direct route for Login
   {
-    path: 'login',
+    path: 'Input-Trace/login',
     component: LoginComponent, // Use the LoginComponent directly
   },
   
