@@ -2,10 +2,9 @@
 .hero {
     text-align: center;
     padding: 5rem 2rem;
-    background-image: url('path/to/your/hero-image.jpg'); /* Add your hero image */
+    background-image: url('https://picsum.photos/seed/picsum/200/300');
     background-size: cover;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Fallback color */
     color: white;
 }
 
@@ -80,4 +79,5 @@
     padding: 1rem 0;
     color: white;
 }
+
 
