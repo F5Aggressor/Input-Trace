@@ -3,18 +3,18 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
     background-color: #f4f4f4;
     color: #333;
     height: 100%; /* Full height */
-    overflow: hidden; /* Avoid extra scrollbars */
-    scroll-snap-type: y mandatory; /* Enables vertical scroll-snapping */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scroll-snap-type: y mandatory; /* Enable vertical scroll-snapping */
 }
 
 /* Each Section */
 .section {
     scroll-snap-align: start; /* Snap each section to the top */
-    height: 100vh; /* Each section takes up the full viewport height */
+    height: 100vh; /* Full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,53 +107,6 @@ html, body {
     background-color: #0056b3;
 }
 
-/* Compliance Section */
-#compliance {
-    background-color: #f9f9f9; /* Light background for readability */
-    color: #333; /* Text color */
-}
-
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #333;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.offerings-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
-.offerings-list li {
-    margin-bottom: 15px;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.offerings-list strong {
-    color: #007bff; /* Highlight important keywords */
-}
-
-/* Analysis and Integration Sections */
-#analysis, #integration {
-    background-color: #fff;
-    color: #333;
-}
-
-#analysis .section-title, #integration .section-title {
-    color: #007bff; /* Add a unique touch to these sections */
-}
-
 /* Footer */
 .footer {
     background-color: #333;
@@ -162,28 +115,3 @@ html, body {
     padding: 20px;
     font-size: 0.9rem;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .offerings-list li {
-        font-size: 0.9rem;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .hero .button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-}
-
