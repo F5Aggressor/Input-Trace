@@ -2,21 +2,18 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Smooth scrolling */
     background-color: #f4f4f4;
     color: #333;
-}
-
-/* Scroll Snap */
-body {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
     height: 100vh;
+    scroll-snap-type: y mandatory; /* Enables vertical scroll-snapping */
+    overflow-y: scroll; /* Allows scrolling */
 }
 
+/* Each Section */
 .section {
-    scroll-snap-align: start;
-    height: 100vh; /* Each section takes up full viewport height */
+    scroll-snap-align: start; /* Ensures each section snaps into view */
+    height: 100vh; /* Full viewport height for each section */
     display: flex;
     align-items: center;
     justify-content: center;
