@@ -1,19 +1,60 @@
-.main-content {
-    padding: 20px;
+/* General Styles */
+body {
+    margin: 0;
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f4f4f4;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+/* Scroll Snap */
+body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
-.card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+.section {
+    scroll-snap-align: start;
+    height: 100vh; /* Each section takes up full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.hero .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0056b3;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero .button:hover {
+    background: #003d99;
+}
+
+/* Main Content */
+.main-content {
+    background: #f9f9f9;
 }
 
 .section-title {
@@ -25,6 +66,7 @@
 .offerings-list {
     list-style: none;
     padding: 0;
+    text-align: left;
 }
 
 .offerings-list li {
@@ -49,20 +91,17 @@
     background: #0056b3;
 }
 
-@media (max-width: 600px) {
-    .card {
-        padding: 15px;
-    }
-
-    .section-title {
-        font-size: 20px;
-    }
-
-    .offerings-list li {
-        font-size: 14px;
-    }
-
-    .intake-button {
-        width: 100%;
-    }
+/* Analysis and Integration Sections */
+#analysis, #integration {
+    background: #fff;
+    color: #333;
 }
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
