@@ -3,20 +3,18 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth; /* Enable smooth scrolling */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
     background-color: #f4f4f4;
     color: #333;
-    height: 100%;
-    overflow: hidden; /* Avoid unnecessary scrollbars */
-    scroll-snap-type: y mandatory; /* Enable scroll-snapping */
-    -webkit-scroll-snap-type: y mandatory; /* For Safari support */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Avoid extra scrollbars */
+    scroll-snap-type: y mandatory; /* Enables vertical scroll-snapping */
 }
 
 /* Each Section */
 .section {
     scroll-snap-align: start; /* Snap each section to the top */
-    -webkit-scroll-snap-align: start; /* Safari support */
-    height: 100vh; /* Full viewport height */
+    height: 100vh; /* Each section takes up the full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,6 +31,7 @@ html, body {
     color: #fff;
     z-index: 1000;
     padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header .container {
@@ -61,6 +60,7 @@ html, body {
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
+    transition: color 0.3s;
 }
 
 .nav ul li a:hover {
@@ -69,17 +69,17 @@ html, body {
 
 /* Hero Section */
 .hero {
-    background-image: url('https://picsum.photos/1600/900'); /* Replace with your image */
+    background-image: url('https://picsum.photos/1600/900'); /* Replace with your desired image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100vh; /* Full height */
     color: #fff;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .hero h2 {
@@ -100,11 +100,58 @@ html, body {
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .hero .button:hover {
     background-color: #0056b3;
+}
+
+/* Compliance Section */
+#compliance {
+    background-color: #f9f9f9; /* Light background for readability */
+    color: #333; /* Text color */
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.offerings-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.offerings-list li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.offerings-list strong {
+    color: #007bff; /* Highlight important keywords */
+}
+
+/* Analysis and Integration Sections */
+#analysis, #integration {
+    background-color: #fff;
+    color: #333;
+}
+
+#analysis .section-title, #integration .section-title {
+    color: #007bff; /* Add a unique touch to these sections */
 }
 
 /* Footer */
@@ -113,6 +160,30 @@ html, body {
     color: #fff;
     text-align: center;
     padding: 20px;
+    font-size: 0.9rem;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .offerings-list li {
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
 
