@@ -1,19 +1,22 @@
 /* General Styles */
-body {
+html, body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
     background-color: #f4f4f4;
     color: #333;
-    height: 100vh;
-    scroll-snap-type: y mandatory; /* Enables vertical scroll-snapping */
-    overflow-y: scroll; /* Allows scrolling */
+    height: 100%;
+    overflow: hidden; /* Avoid unnecessary scrollbars */
+    scroll-snap-type: y mandatory; /* Enable scroll-snapping */
+    -webkit-scroll-snap-type: y mandatory; /* For Safari support */
 }
 
 /* Each Section */
 .section {
-    scroll-snap-align: start; /* Ensures each section snaps into view */
-    height: 100vh; /* Full viewport height for each section */
+    scroll-snap-align: start; /* Snap each section to the top */
+    -webkit-scroll-snap-align: start; /* Safari support */
+    height: 100vh; /* Full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +69,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('https://picsum.photos/1600/900'); /* Replace with your desired image URL */
+    background-image: url('https://picsum.photos/1600/900'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,28 +107,6 @@ body {
     background-color: #0056b3;
 }
 
-/* Compliance Section */
-.main-content {
-    background: #f9f9f9;
-}
-
-.section-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.offerings-list {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-
-.offerings-list li {
-    margin-bottom: 15px;
-    font-size: 16px;
-}
-
 /* Footer */
 .footer {
     background-color: #333;
@@ -133,4 +114,5 @@ body {
     text-align: center;
     padding: 20px;
 }
+
 
