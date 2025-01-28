@@ -1,0 +1,90 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Subtle transparency */
+  color: #ffffff;
+  padding: 5px 20px; /* Thin padding for a compact footer */
+  display: flex;
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: center;
+  font-size: 10px; /* Compact text */
+  backdrop-filter: blur(1px); /* Light blur for a sleek effect */
+  z-index: 1000;
+  font-family: Arial, sans-serif; /* Clean font */
+  overflow: hidden; /* Prevent content from overflowing the footer */
+  box-sizing: border-box; /* Ensure padding doesn’t add to width */
+}
+
+.footer-copyright {
+  text-align: left;
+  margin-right: auto; /* Push to the far left */
+  font-size: 10px; /* Small and subtle copyright text */
+  flex-shrink: 0; /* Prevent shrinking of this section */
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: row; /* Arrange items in a single row */
+  align-items: center;
+  justify-content: flex-end; /* Align content to the far right */
+  margin-left: 40px !important; /* Reduced spacing between sections */
+  flex-wrap: nowrap !important; /* Prevent wrapping */
+  max-width: calc(100% - 200px); /* Ensure the section does not exceed available space */
+  flex-shrink: 1; /* Allow this section to shrink if needed */
+  overflow: hidden; /* Prevent text overflow */
+}
+
+.footer-section a,
+.footer-section p {
+  margin-left: 10px !important; /* Reduced spacing between links */
+  font-size: 10px !important; /* Smaller font */
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: color 0.3s ease !important;
+  white-space: nowrap; /* Prevent links from breaking into multiple lines */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis if text is too long */
+}
+
+.footer-section-title {
+  font-weight: bold;
+  margin-right: 5px; /* Adjust space after section titles */
+  white-space: nowrap; /* Prevent section titles from wrapping */
+}
+
+.footer-section:last-child {
+  margin-left: auto; /* Push the "Connect" section to the rightmost side */
+  max-width: calc(100% - 220px); /* Adjust width to prevent overflow */
+}
+
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column; /* Stack content on small screens */
+      text-align: center;
+      padding: 10px;
+  }
+
+  .footer-copyright {
+      margin: 0 auto 5px auto; /* Center-align on small screens */
+      text-align: center;
+  }
+
+  .footer-section {
+      margin: 0 auto; /* Center-align on small screens */
+      justify-content: center;
+      max-width: 100%; /* Allow full width on smaller screens */
+      flex-wrap: wrap !important; /* Allow wrapping for better fit */
+  }
+
+  .footer-section:last-child {
+      margin-left: 0; /* Center-align "Connect" on small screens */
+  }
+
+  .footer-section a,
+  .footer-section p {
+      margin: 5px; /* Adjust spacing between items for small screens */
+      white-space: normal; /* Allow wrapping on smaller screens */
+      text-overflow: clip; /* Show full text */
+  }
+}

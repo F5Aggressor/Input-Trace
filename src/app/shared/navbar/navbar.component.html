@@ -1,0 +1,10 @@
+<div class="navbar">
+    <button class="nav-toggle" (click)="toggleNav()">☰</button>
+    <div class="nav" 
+         [class.open]="navOpen" 
+         (mouseleave)="closeNav()">
+      <a routerLink="/user-dashboard">User Dashboard</a>
+      <a routerLink="/admin-dashboard">Admin Dashboard</a>
+    </div>
+  </div>
+  
