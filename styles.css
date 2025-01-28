@@ -69,7 +69,7 @@ html, body {
 
 /* Hero Section */
 .hero {
-    background-image: url('assets/detroit-skyline'); /* Update path to match your image location */
+    background-image: url('assets/detroit-skyline.jpg'); /* Update path to match your image location */
     background-size: cover; /* Ensure the image covers the entire hero section */
     background-position: center; /* Focus on the center of the image */
     background-repeat: no-repeat; /* Prevent tiling */
