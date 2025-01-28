@@ -108,41 +108,67 @@ html, body {
 }
 
 /* Compliance Section */
-#compliance {
-    background-color: #f9f9f9; /* Light background for readability */
-    color: #333; /* Text color */
+.compliance {
+    background-color: #1c1c1c;
+    color: #f4f4f4;
+    padding: 60px 20px;
 }
 
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #333;
-}
-
-.container {
-    max-width: 800px;
+.compliance .container {
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.content-box {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    background-color: #2a2a2a;
+    border-radius: 10px;
     padding: 20px;
     text-align: center;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.offerings-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
+.grid-item img {
+    width: 50px;
+    margin-bottom: 10px;
 }
 
-.offerings-list li {
-    margin-bottom: 15px;
-    font-size: 1rem;
-    line-height: 1.5;
+.grid-item h4 {
+    margin-bottom: 10px;
+    color: #00bcd4;
 }
 
-.offerings-list strong {
-    color: #007bff; /* Highlight important keywords */
+.cta {
+    text-align: center;
+    margin-top: 40px;
 }
+
+.cta .button {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta .button:hover {
+    background-color: #008c9e;
+}
+
 
 /* Analysis Section */
 #analysis {
@@ -196,3 +222,5 @@ html, body {
         padding: 8px 16px;
     }
 }
+
+
