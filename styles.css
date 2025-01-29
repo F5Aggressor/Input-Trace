@@ -26,37 +26,37 @@ html, body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Subtle transparency to match footer */
+    background-color: rgba(0, 0, 0, 0.6); /* Match footer */
     color: #ffffff;
-    padding: 5px 20px; /* Match footer's compact padding */
+    padding: 10px 20px; /* Increase padding for better visibility */
     display: flex;
-    justify-content: space-between; /* Space between logo and navigation */
+    justify-content: space-between; /* Align logo and nav */
     align-items: center;
-    font-size: 10px; /* Match footer text size */
-    backdrop-filter: blur(1px); /* Light blur effect for sleek look */
+    font-size: 12px; /* Increase font size for visibility */
+    backdrop-filter: blur(1px);
     z-index: 1000;
-    font-family: Arial, sans-serif; /* Match footer font */
-    overflow: hidden; /* Prevent overflow */
-    box-sizing: border-box; /* Ensure padding does not add to width */
+    box-sizing: border-box;
+    min-height: 50px; /* Set a minimum height */
 }
 
-/* Logo Styling */
+/* Logo */
 .header .logo {
-    font-size: 10px; /* Match footer text */
+    font-size: 14px; /* Ensure visibility */
     font-weight: bold;
-    flex-shrink: 0; /* Prevent shrinking */
+    flex-shrink: 0;
 }
 
 /* Navigation Menu */
 .nav {
     display: flex;
     justify-content: flex-end;
-    flex-wrap: nowrap !important; /* Prevent wrapping */
-    max-width: calc(100% - 200px); /* Ensure the section does not exceed available space */
-    flex-shrink: 1; /* Allow shrinking if needed */
-    overflow: hidden; /* Hide overflow content */
+    flex-wrap: nowrap;
+    max-width: calc(100% - 200px);
+    flex-shrink: 1;
+    overflow: hidden;
 }
 
+/* Ensure Navigation Renders */
 .nav ul {
     list-style: none;
     margin: 0;
@@ -65,41 +65,33 @@ html, body {
 }
 
 .nav ul li {
-    margin-left: 10px; /* Match footer link spacing */
+    margin-left: 15px; /* Ensure spacing */
 }
 
 .nav ul li a {
     text-decoration: none;
-    color: #ffffff !important;
-    font-size: 10px !important; /* Match footer font size */
-    transition: color 0.3s ease !important;
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    color: #ffffff;
+    font-size: 12px; /* Improve readability */
+    transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav ul li a:hover {
-    color: #00bcd4; /* Maintain existing hover effect */
+    color: #00bcd4;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; /* Stack content on small screens */
+        flex-direction: column;
         text-align: center;
-        padding: 10px;
-    }
-
-    .logo {
-        margin: 0 auto 5px auto; /* Center-align logo */
-        text-align: center;
+        padding: 15px;
+        min-height: auto;
     }
 
     .nav {
-        margin: 0 auto;
         justify-content: center;
-        max-width: 100%; /* Allow full width */
-        flex-wrap: wrap !important; /* Allow wrapping */
+        max-width: 100%;
     }
 
     .nav ul {
@@ -108,14 +100,14 @@ html, body {
     }
 
     .nav ul li {
-        margin: 5px 0; /* Adjust spacing for smaller screens */
+        margin: 5px 0;
     }
 
     .nav ul li a {
-        white-space: normal; /* Allow text wrapping */
-        text-overflow: clip; /* Show full text */
+        font-size: 14px;
     }
 }
+
 
 
 /* Hero Section */
