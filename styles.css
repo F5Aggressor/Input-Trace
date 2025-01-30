@@ -159,29 +159,56 @@ html, body {
     z-index: 1;
 }
 
+/* Hero Section */
+.hero {
+    background-image: url('Assets/detroit-skyline.jpg'); /* Ensure correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Dark Overlay for Better Readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker for contrast */
+    z-index: 1;
+}
+
 /* Hero Container */
 .hero-container {
     position: relative;
     z-index: 2;
-    max-width: 850px; /* Slightly increased width */
-    padding: 40px; /* More padding for better spacing */
-    background: rgba(0, 0, 0, 0.8); /* Slightly darker for more readability */
+    max-width: 900px; /* Slightly wider for readability */
+    padding: 50px; /* Increased padding */
+    background: rgba(0, 0, 0, 0.8); /* Stronger contrast */
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Mission Statement (Text) */
 .hero-content h1 {
-    font-size: 2.8rem; /* Slightly larger heading */
+    font-size: 2.8rem; /* Slightly larger */
     font-weight: 700;
     margin-bottom: 18px;
-    color: #00bcd4; /* Bright accent for emphasis */
+    color: #00bcd4; /* Accent color */
 }
 
 .hero-content p {
     font-size: 1.3rem;
-    color: #e0e0e0; /* Softer white for readability */
-    line-height: 1.7;
+    line-height: 1.8; /* Improved spacing */
+    color: #e0e0e0; /* Softer white */
     margin-bottom: 30px;
 }
 
@@ -190,18 +217,24 @@ html, body {
     display: inline-block;
     background-color: #00bcd4;
     color: #fff;
-    padding: 12px 25px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
     transition: all 0.3s ease-in-out;
 }
 
 .hero-content .button:hover {
+    transform: scale(1.05); /* Subtle hover effect */
     background-color: #008c9e;
     box-shadow: 0 5px 12px rgba(0, 188, 212, 0.5);
-    transform: scale(1.05);
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Design */
@@ -224,8 +257,6 @@ html, body {
         padding: 10px 20px;
     }
 }
-
-
 /* Compliance Section */
 #compliance {
     background-color: #1c1c1c;
