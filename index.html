@@ -1,118 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I/O Trace - Cybersecurity Consultancy</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I/O Trace - Cybersecurity Consultancy</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Header -->
-<header class="header">
-    <div class="container">
-        <div class="logo">InputTrace</div>
-        <nav class="nav">
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#compliance">Compliance</a></li>
-                <li><a href="#analysis">Analysis</a></li>
-                <li><a href="#integration">Integration</a></li>
-            </ul>
-            <!-- Mobile Menu Button -->
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
-        </nav>
-    </div>
-</header>
+  <!-- Header -->
+  <header class="header">
+      <div class="container">
+          <div class="logo">InputTrace</div>
+          <nav class="nav">
+              <ul class="nav-links">
+                  <li><a href="#hero">Home</a></li>
+                  <li><a href="#compliance">Compliance</a></li>
+                  <li><a href="#analysis">Analysis</a></li>
+                  <li><a href="#integration">Integration</a></li>
+              </ul>
+              <!-- Mobile Menu Button -->
+              <div class="hamburger" onclick="toggleMenu()">☰</div>
+          </nav>
+      </div>
+  </header>
 
+  <!-- Hero Section (Simplified) -->
+  <section id="hero" class="section hero">
+      <div class="hero-container">
+          <div class="hero-content">
+              <h1>Cybersecurity Consultancy</h1>
+              <p>Helping businesses achieve security and confidence in the digital age.</p>
+              <!-- Optionally remove the Learn More button if you want a truly minimal page -->
+              <!-- <a href="#compliance" class="button">Learn More</a> -->
+          </div>
+      </div>
+  </section>
 
-    <section id="hero" class="section hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Cybersecurity Consultancy</h1>
-                <p>
-                    At InputTrace, we help businesses across the Rust Belt secure their application landscape, achieve compliance certifications, and prepare for audits through expert security assessments. Whether you're an SMB or a large enterprise, we tailor our strategies to protect your critical systems, ensuring both security and regulatory success.
-                </p>
-                <a href="#compliance" class="button">Learn More</a>
-            </div>
-        </div>
-    </section>
+  <!-- Extra sections (currently hidden by CSS for a simplified main page) -->
+  <section id="compliance" class="section compliance">
+      <div class="container">
+          <!-- Title and Description -->
+          <div class="content-box">
+              <h3>Streamlined Compliance Solutions</h3>
+              <p>"Empower your organization to achieve industry-recognized security certifications and compliance standards with expert guidance tailored to your unique needs. Whether you're preparing for an audit or strengthening your security posture, we provide the insights and strategies to help you succeed."</p>
+          </div>
 
+          <!-- Services Grid -->
+          <div class="grid">
+              <div class="grid-item">
+                  <img src="icon-gap-analysis.svg" alt="Gap Analysis Icon">
+                  <h4>Gap Analysis</h4>
+                  <p>Whether you're preparing for an audit or certification, our professionals can help review both technical and non-technical controls to identify potential gaps and ensure compliance readiness.</p>
+              </div>
+              <div class="grid-item">
+                  <img src="icon-roadmap.svg" alt="Remediation Roadmap Icon">
+                  <h4>Remediation Roadmap</h4>
+                  <p>Develop a structured, step-by-step plan to address security gaps, streamline compliance efforts, and fortify your security posture.</p>
+              </div>
+              <div class="grid-item">
+                  <img src="icon-policy.svg" alt="Policy Development Icon">
+                  <h4>Policy Development</h4>
+                  <p>Craft customized security policies and governance frameworks tailored to your business needs, ensuring regulatory alignment and operational efficiency.</p>
+              </div>
+          </div>
 
+          <!-- Call-to-Action -->
+          <div class="cta">
+              <h4>Achieve Compliance Today</h4>
+              <p>Let our experts guide you through the process.</p>
+              <a href="#contact" class="button">Get Started</a>
+          </div>
+      </div>
+  </section>
 
-<section id="compliance" class="section compliance">
-    <div class="container">
-        <!-- Title and Description -->
-        <div class="content-box">
-            <h3>Streamlined Compliance Solutions</h3>
-            <p>"Empower your organization to achieve industry-recognized security certifications and compliance standards with expert guidance tailored to your unique needs. Whether you're preparing for an audit or strengthening your security posture, we provide the insights and strategies to help you succeed."</p>
-        </div>
+  <!-- Analysis Section -->
+  <section id="analysis" class="section">
+      <div class="container">
+          <h3 class="section-title">Comprehensive Analysis</h3>
+          <p>At I/O Trace, we specialize in application security by providing comprehensive data flow analysis. From high-level, easily digestible models to detailed method level call trees, we ensure everyone can understand the context of an attack chain. By meticulously tracing data flows derived from attack surface analysis, we uncover and address vulnerabilities that pose the greatest risks to your systems.</p>
+      </div>
+  </section>
 
-<!-- Services Grid -->
-<div class="grid">
-    <div class="grid-item">
-        <img src="icon-gap-analysis.svg" alt="Gap Analysis Icon">
-        <h4>Gap Analysis</h4>
-        <p>Whether you're preparing for an audit or certification, our professionals can help review both technical and non-technical controls to identify potential gaps and ensure compliance readiness.</p>
-    </div>
-    <div class="grid-item">
-        <img src="icon-roadmap.svg" alt="Remediation Roadmap Icon">
-        <h4>Remediation Roadmap</h4>
-        <p>Develop a structured, step-by-step plan to address security gaps, streamline compliance efforts, and fortify your security posture.</p>
-    </div>
-    <div class="grid-item">
-        <img src="icon-policy.svg" alt="Policy Development Icon">
-        <h4>Policy Development</h4>
-        <p>Craft customized security policies and governance frameworks tailored to your business needs, ensuring regulatory alignment and operational efficiency.</p>
-    </div>
-</div>
+  <!-- Integration Section -->
+  <section id="integration" class="section">
+      <div class="container">
+          <h3 class="section-title">Seamless Integration</h3>
+          <p>Easily integrate tools into your infrastructure for enhanced security.</p>
+      </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="footer-copyright">
+        <p>© 2025 I/O Trace. All rights reserved.</p>
+      </div>
+      <div class="footer-section">
+          <span class="footer-section-title">Policy:</span>
+          <a href="#">Cookies</a>
+          <a href="#">Privacy</a>
+      </div>
+      <div class="footer-section">
+          <span class="footer-section-title">Connect:</span>
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
+      </div>
+  </footer>
 
-        <!-- Call-to-Action -->
-        <div class="cta">
-            <h4>Achieve Compliance Today</h4>
-            <p>Let our experts guide you through the process.</p>
-            <a href="#contact" class="button">Get Started</a>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Analysis Section -->
-    <section id="analysis" class="section">
-        <div class="container">
-            <h3 class="section-title">Comprehensive Analysis</h3>
-            <p>At I/O Trace, we specialize in application security by providing comprehensive data flow analysis. From high-level, easily digestible models to detailed method level call trees, we ensure everyone can understand the context of an attack chain. By meticulously tracing data flows derived from attack surface analysis, we uncover and address vulnerabilities that pose the greatest risks to your systems.</p>
-        </div>
-    </section>
-
-    <!-- Integration Section -->
-    <section id="integration" class="section">
-        <div class="container">
-            <h3 class="section-title">Seamless Integration</h3>
-            <p>Easily integrate tools into your infrastructure for enhanced security.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-copyright">
-          <p>© 2025 I/O Trace. All rights reserved.</p>
-        </div>
-        <div class="footer-section">
-            <span class="footer-section-title">Policy:</span>
-            <a href="#">Cookies</a>
-            <a href="#">Privacy</a>
-        </div>
-        <div class="footer-section">
-            <span class="footer-section-title">Connect:</span>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
-            <a href="#">YouTube</a>
-        </div>
-      </footer>
-
-    <script src="script.js" defer></script>
-
+  <script src="script.js" defer></script>
 </body>
 </html>
 
