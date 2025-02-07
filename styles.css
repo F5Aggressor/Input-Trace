@@ -12,7 +12,7 @@
 html, body {
   height: 100%;
   font-family: Arial, sans-serif;
-  /* Hide body scrolling so only our scroll container scrolls */
+  /* Prevent body scroll; only our container scrolls */
   overflow: hidden;
 }
 
@@ -73,16 +73,17 @@ html, body {
 /* Snap Sections */
 .snap-section {
   height: 100%;
+  /* Remove extra padding that could cause content to spill over */
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
-/* HERO SECTION with Background Image */
+/* HERO SECTION */
 .hero-section {
   position: relative;
-  background: url('assets/detroit-skyline.jpg') no-repeat center center;
+  background: url('./assets/detroit-skyline.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -127,6 +128,7 @@ html, body {
 .service-section {
   background-color: #f5f5f5;
   color: #333;
+  /* Remove extra padding to ensure full-screen display */
 }
 
 .service-content {
@@ -164,6 +166,7 @@ html, body {
 
 .footer-content {
   text-align: center;
+  width: 100%;
 }
 
 .footer-links a {
