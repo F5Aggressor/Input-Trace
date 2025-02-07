@@ -12,7 +12,7 @@
 html, body {
   height: 100%;
   font-family: Arial, sans-serif;
-  /* Prevent body scroll; only our container scrolls */
+  /* Prevent body scroll; only the scroll container scrolls */
   overflow: hidden;
 }
 
@@ -73,7 +73,7 @@ html, body {
 /* Snap Sections */
 .snap-section {
   height: 100%;
-  /* Remove extra padding that could cause content to spill over */
+  /* Remove extra padding to avoid overlap */
   padding: 0;
   display: flex;
   justify-content: center;
@@ -83,7 +83,7 @@ html, body {
 /* HERO SECTION */
 .hero-section {
   position: relative;
-  background: url('./assets/detroit-skyline.jpg') no-repeat center center;
+  background: url('./Assets/detroit-skyline.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -128,7 +128,6 @@ html, body {
 .service-section {
   background-color: #f5f5f5;
   color: #333;
-  /* Remove extra padding to ensure full-screen display */
 }
 
 .service-content {
@@ -190,6 +189,5 @@ html, body {
     font-size: 2em;
   }
 }
-
 
 
