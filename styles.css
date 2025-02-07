@@ -12,7 +12,7 @@
 html, body {
   height: 100%;
   font-family: Arial, sans-serif;
-  /* We let the scroll-container handle scrolling, so hide body overflow */
+  /* Hide body scrolling so only our container scrolls */
   overflow: hidden;
 }
 
@@ -42,16 +42,16 @@ html, body {
   font-size: 1.5em;
 }
 
-.nav .nav-links {
+.nav-links {
   list-style: none;
   display: flex;
 }
 
-.nav .nav-links li {
+.nav-links li {
   margin-left: 20px;
 }
 
-.nav .nav-links a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
 }
@@ -62,14 +62,15 @@ html, body {
   cursor: pointer;
 }
 
-/* Main Scroll Container */
+/* Scroll Container (fills viewport minus header) */
 .scroll-container {
   margin-top: var(--header-height);
   height: calc(100vh - var(--header-height));
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
-/* Snap Sections (Full-Page Sections) */
+/* Each snap section fills the scroll container */
 .snap-section {
   height: 100%;
   display: flex;
@@ -78,17 +79,29 @@ html, body {
   padding: 20px;
 }
 
-/* Hero Section with Detroit Skyline Background */
-.hero {
-  background: url('assets/detroit-skyline.jpg') no-repeat center center/cover;
-  color: #fff;
+/* HERO SECTION with background image */
+.hero-section {
+  position: relative;
+  background: url('assets/detroit-skyline.jpg') no-repeat center center;
+  background-size: cover;
 }
 
-.hero-container {
-  background: rgba(0, 0, 0, 0.5); /* Optional overlay for readability */
-  padding: 40px;
-  border-radius: 8px;
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
   text-align: center;
+  color: #fff;
+  padding: 20px;
 }
 
 .hero-content h1 {
@@ -110,69 +123,52 @@ html, body {
   border-radius: 4px;
 }
 
-/* Service Section Styling */
+/* SERVICE SECTIONS */
 .service-section {
   background-color: #f5f5f5;
   color: #333;
 }
 
-.service-container {
+.service-content {
+  text-align: center;
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
+  padding: 20px;
 }
 
-.service-container h2 {
+.service-content h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
 }
 
-.service-container p {
+.service-content p {
   font-size: 1.1em;
   margin-bottom: 20px;
 }
 
-.service-container h3 {
-  margin-top: 20px;
-  font-size: 1.8em;
-}
-
-.service-container ul {
+.service-content ul {
   list-style: none;
   padding: 0;
   margin: 20px 0;
 }
 
-.service-container ul li {
+.service-content ul li {
   margin-bottom: 10px;
 }
 
-/* Footer Styling */
+/* FOOTER */
 .footer {
   background-color: #222;
   color: #ccc;
-  padding: 20px 0;
   text-align: center;
+  padding: 20px;
   font-size: 0.9em;
 }
 
-.footer .container {
+.footer-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-links {
-  margin-top: 10px;
 }
 
 .footer-links a {
@@ -181,19 +177,20 @@ html, body {
   margin: 0 10px;
 }
 
-/* Responsive Adjustments */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .nav .nav-links {
-    display: none; /* You can toggle via JavaScript when hamburger is clicked */
+  .nav-links {
+    display: none;
   }
   .hamburger {
     display: block;
   }
-  .service-container h2 {
-    font-size: 2em;
-  }
   .hero-content h1 {
     font-size: 2.5em;
   }
+  .service-content h2 {
+    font-size: 2em;
+  }
 }
+
 
