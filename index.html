@@ -1,102 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I/O Trace - Cybersecurity Consultancy</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Your Website</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#compliance">Compliance</a></li>
-                    <li><a href="#analysis">Analysis</a></li>
-                    <li><a href="#integration">Integration</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero" class="section hero">
-        <div class="container">
-            <h2>Welcome to Your Website</h2>
-            <p>Protect your business with advanced solutions.</p>
-            <a href="#compliance" class="button">Request a Demo</a>
-        </div>
-    </section>
-
-<section id="compliance" class="section compliance">
+  <!-- Fixed Header -->
+  <header class="header">
     <div class="container">
-        <!-- Container 1: Intro -->
-        <div class="content-box">
-            <h3>Streamlined Compliance Solutions</h3>
-            <p>
-                Empower your organization to meet SOC 2, ISO 27001, and other compliance standards with expert guidance designed to fit your unique needs.
-            </p>
-        </div>
-
-        <!-- Container 2: Services -->
-        <div class="grid">
-            <div class="grid-item">
-                <img src="compliance-icon1.png" alt="Gap Analysis">
-                <h4>Gap Analysis</h4>
-                <p>Identify gaps in your current security controls and align them with industry standards.</p>
-            </div>
-            <div class="grid-item">
-                <img src="compliance-icon2.png" alt="Remediation Roadmap">
-                <h4>Remediation Roadmap</h4>
-                <p>Develop a tailored, step-by-step plan to close compliance gaps.</p>
-            </div>
-            <div class="grid-item">
-                <img src="compliance-icon3.png" alt="Policy Development">
-                <h4>Policy Development</h4>
-                <p>Draft custom security policies aligned with best practices.</p>
-            </div>
-        </div>
-
-        <!-- Container 3: Call-to-Action -->
-        <div class="cta">
-            <h4>Achieve Compliance Today</h4>
-            <p>Let our experts guide you through the process.</p>
-            <a href="#contact" class="button">Get Started</a>
-        </div>
+      <div class="logo">InputTrace</div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#maturity">Maturity Assessment</a></li>
+          <li><a href="#technical">Technical Risk Assessment</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </nav>
     </div>
-</section>
+  </header>
 
-
-    <!-- Analysis Section -->
-    <section id="analysis" class="section">
-        <div class="container">
-            <h3 class="section-title">Comprehensive Analysis</h3>
-            <p>Understand and mitigate vulnerabilities effectively.</p>
+  <!-- Main Scroll Container -->
+  <main class="scroll-container">
+    <!-- Hero Section (with Detroit skyline background) -->
+    <section id="hero" class="snap-section hero-section">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>Cybersecurity Consultancy</h1>
+          <p>
+            At InputTrace, we secure your digital future with innovative solutions.
+          </p>
+          <a href="#maturity" class="button">Explore Services</a>
         </div>
+      </div>
     </section>
 
-    <!-- Integration Section -->
-    <section id="integration" class="section">
-        <div class="container">
-            <h3 class="section-title">Seamless Integration</h3>
-            <p>Easily integrate tools into your infrastructure for enhanced security.</p>
-        </div>
+    <!-- Maturity Assessment Section -->
+    <section id="maturity" class="snap-section service-section">
+      <div class="service-content">
+        <h2>Maturity Assessment</h2>
+        <p>
+          Evaluate your cybersecurity posture, identify gaps, and get a roadmap for improvement.
+        </p>
+        <ul>
+          <li>Comprehensive review of current practices</li>
+          <li>Tailored recommendations</li>
+          <li>Actionable insights</li>
+        </ul>
+        <a href="#technical" class="button">Next: Technical Risk Assessment</a>
+      </div>
     </section>
 
-    <script src="script.js"></script>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Your Website. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <!-- Technical Risk Assessment Section -->
+    <section id="technical" class="snap-section service-section">
+      <div class="service-content">
+        <h2>Technical Risk Assessment</h2>
+        <p>
+          Identify vulnerabilities and mitigate risks with an in-depth technical analysis.
+        </p>
+        <ul>
+          <li>Detailed system analysis</li>
+          <li>Risk evaluation</li>
+          <li>Actionable mitigation strategies</li>
+        </ul>
+        <a href="#hero" class="button">Back to Top</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© 2025 InputTrace. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Cookies</a>
+        <a href="#">Privacy</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js" defer></script>
 </body>
 </html>
-
 
 
 
