@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let scrollTimeout;
 
   container.addEventListener('scroll', () => {
-    // Debounce the scroll event
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
       const scrollPos = container.scrollTop;
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth'
         });
       }
-    }, 100); // Adjust debounce delay if needed
+    }, 100); // Debounce delay (adjust if needed)
   });
 });
 
@@ -39,3 +38,4 @@ function toggleMenu() {
     navLinks.style.flexDirection = 'column';
   }
 }
+
