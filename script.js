@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth'
         });
       }
-    }, 100); // Debounce delay (adjust if needed)
+    }, 100); // Adjust debounce delay if needed
   });
 });
 
@@ -38,4 +38,5 @@ function toggleMenu() {
     navLinks.style.flexDirection = 'column';
   }
 }
+
 
