@@ -2,14 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.scroll-container');
   const sections = document.querySelectorAll('.snap-section');
   let scrollTimeout;
-
+  
   container.addEventListener('scroll', () => {
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
       const scrollPos = container.scrollTop;
+      
+      // If we're nearly at the top, snap exactly to 0.
+      if (scrollPos < 50) {
+        container.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      
       let nearestSection = null;
       let minDistance = Infinity;
-
+      
       sections.forEach(section => {
         const distance = Math.abs(section.offsetTop - scrollPos);
         if (distance < minDistance) {
@@ -17,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
           nearestSection = section;
         }
       });
-
+      
       if (nearestSection) {
         container.scrollTo({
           top: nearestSection.offsetTop,
           behavior: 'smooth'
         });
       }
-    }, 100); // Adjust debounce delay if needed
+    }, 100); // Debounce delay (adjust if needed)
   });
 });
 
