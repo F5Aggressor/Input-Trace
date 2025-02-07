@@ -12,7 +12,7 @@
 html, body {
   height: 100%;
   font-family: Arial, sans-serif;
-  /* Hide body scrolling so only our container scrolls */
+  /* Hide body scrolling so only our scroll container scrolls */
   overflow: hidden;
 }
 
@@ -62,7 +62,7 @@ html, body {
   cursor: pointer;
 }
 
-/* Scroll Container (fills viewport minus header) */
+/* Scroll Container */
 .scroll-container {
   margin-top: var(--header-height);
   height: calc(100vh - var(--header-height));
@@ -70,7 +70,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* Each snap section fills the scroll container */
+/* Snap Sections */
 .snap-section {
   height: 100%;
   display: flex;
@@ -79,7 +79,7 @@ html, body {
   padding: 20px;
 }
 
-/* HERO SECTION with background image */
+/* HERO SECTION with Background Image */
 .hero-section {
   position: relative;
   background: url('assets/detroit-skyline.jpg') no-repeat center center;
@@ -156,19 +156,14 @@ html, body {
   margin-bottom: 10px;
 }
 
-/* FOOTER */
-.footer {
+/* FOOTER SECTION */
+.footer-section {
   background-color: #222;
   color: #ccc;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
 }
 
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.footer-content {
+  text-align: center;
 }
 
 .footer-links a {
@@ -177,7 +172,7 @@ html, body {
   margin: 0 10px;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -192,5 +187,6 @@ html, body {
     font-size: 2em;
   }
 }
+
 
 
