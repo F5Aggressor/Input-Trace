@@ -155,64 +155,98 @@ html, body {
   margin-bottom: 10px;
 }
 
-/* Maturity Assessment Styles */
-#maturity-assessment {
+/* Maturity Assessment Section */
+#maturity {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: #f8f9fa;
+  padding: 60px 20px;
+  width: 100%;
 }
 
-#maturity-assessment .hero {
-  background-image: url('./Assets/detroit-skyline.jpg');
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#maturity .challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+#maturity .challenge-item {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Responsive Fix for Challenge Grid */
+@media (max-width: 1024px) {
+  #maturity .challenge-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #maturity .challenge-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Elevate Your Cybersecurity Posture - Ensuring Video Stays Inside */
+#elevate {
+  padding: 60px 20px;
   text-align: center;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-#maturity-assessment .hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+/* Ensure Video & Text Stay Together */
+#elevate .elevate-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-#maturity-assessment .hero p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
+#elevate .elevate-text {
+  flex: 1;
+  text-align: left;
+  min-width: 50%;
 }
 
-#maturity-assessment .cta-button {
-  background-color: #007BFF;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+#elevate .elevate-video {
+  flex: 1;
+  min-width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
-#maturity-assessment .content-section {
-  padding: 40px 20px;
-  max-width: 800px;
+#elevate .elevate-video video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#maturity-assessment .content-section h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-}
+/* Mobile Fix for Elevate Section */
+@media (max-width: 1024px) {
+  #elevate .elevate-flex {
+    flex-direction: column;
+    text-align: center;
+  }
 
-#maturity-assessment .content-section p, 
-#maturity-assessment .content-section ul {
-  font-size: 1em;
-  line-height: 1.6;
-}
-
-#maturity-assessment .content-section ul {
-  padding-left: 20px;
+  #elevate .elevate-text,
+  #elevate .elevate-video {
+    min-width: 100%;
+    text-align: center;
+  }
 }
 
 
