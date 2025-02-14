@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="step" *ngFor="let step of steps; let i = index" #stepElements>
+      <div class="card">
+        <h3>{{ step.title }}</h3>
+        <pre class="request">{{ step.request }}</pre>
+        <p class="description">{{ step.description }}</p>
+      </div>
+      <div *ngIf="i < steps.length - 1" class="arrow"></div>
+    </div>
+    <button (click)="nextStep()">Next Step</button>
+</div>

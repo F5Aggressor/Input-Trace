@@ -9,6 +9,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './features/login/login.component';
+import { XxeAttackAnimationComponent } from './features/xxe-attack-animation/xxe-attack-animation.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LoginComponent } from './features/login/login.component';
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    XxeAttackAnimationComponent
   ],
   imports: [
     BrowserModule,
