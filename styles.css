@@ -72,9 +72,7 @@ html, body {
 
 /* Snap Sections */
 .snap-section {
-  height: 100%;
-  /* Remove extra padding to avoid overlap */
-  padding: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +91,7 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,21 +156,37 @@ html, body {
 }
 
 /* Maturity Assessment Styles */
-#maturity-assessment .hero {
-  background-image: url('./Assets/detroit-skyline.jpg'); /* Use existing Detroit background */
-  background-size: cover;
-  color: #fff;
+#maturity-assessment {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 50px 20px;
 }
+
+#maturity-assessment .hero {
+  background-image: url('./Assets/detroit-skyline.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 #maturity-assessment .hero h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
 }
+
 #maturity-assessment .hero p {
   font-size: 1.2em;
   margin-bottom: 30px;
 }
+
 #maturity-assessment .cta-button {
   background-color: #007BFF;
   color: #fff;
@@ -180,22 +194,26 @@ html, body {
   text-decoration: none;
   border-radius: 5px;
 }
+
 #maturity-assessment .content-section {
   padding: 40px 20px;
+  max-width: 800px;
 }
+
 #maturity-assessment .content-section h2 {
   font-size: 2em;
   margin-bottom: 15px;
 }
+
 #maturity-assessment .content-section p, 
 #maturity-assessment .content-section ul {
   font-size: 1em;
   line-height: 1.6;
 }
+
 #maturity-assessment .content-section ul {
   padding-left: 20px;
 }
-
 
 /* FOOTER SECTION */
 .footer-section {
@@ -229,5 +247,3 @@ html, body {
     font-size: 2em;
   }
 }
-
-
