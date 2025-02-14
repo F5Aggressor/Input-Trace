@@ -1,108 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I/O Trace - Cybersecurity Consultancy</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I/O Trace - Cybersecurity Consultancy</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Fixed Header -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">InputTrace</div>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#maturity">Maturity Assessment</a></li>
-          <li><a href="#technical">Technical Risk Assessment</a></li>
-          <li><a href="#footer-section">Contact</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Main Scroll Container -->
-  <!-- The container’s height is set to the viewport height minus the header -->
-  <main class="scroll-container">
-    <!-- Hero Section -->
-    <section id="hero" class="snap-section hero-section">
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <h1>Cybersecurity Consultancy</h1>
-          <p>
-            At InputTrace, we secure your digital future with innovative solutions.
-          </p>
-          <a href="#maturity" class="button">Explore Services</a>
+    <!-- Fixed Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">InputTrace</div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#maturity">Maturity Assessment</a></li>
+                    <li><a href="#technical">Technical Risk Assessment</a></li>
+                    <li><a href="#footer-section">Contact</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+            </nav>
         </div>
-      </div>
-    </section>
+    </header>
 
-<!-- Existing Maturity Assessment Section -->
-<section id="maturity-assessment">
-  
-  <!-- Added Hero Section -->
-  <div class="hero">
-    <h1>Enhance Your Cybersecurity Maturity</h1>
-    <p>Identify gaps, mitigate risks, and strengthen your security posture with our comprehensive assessment.</p>
-    <a href="#contact" class="cta-button">Schedule an Assessment</a>
-  </div>
+    <!-- Main Scroll Container -->
+    <main class="scroll-container">
+        <!-- Hero Section -->
+        <section id="hero" class="snap-section hero-section">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Cybersecurity Consultancy</h1>
+                    <p>
+                        At InputTrace, we secure your digital future with innovative solutions.
+                    </p>
+                    <a href="#maturity" class="button">Explore Services</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- Structured Content Sections -->
-  <div class="content-section">
-    <h2>The Challenge</h2>
-    <p>Modern enterprises face an evolving range of cyber threats. Without a clear understanding of your security maturity, vulnerabilities can be exploited, compliance can be compromised, and operational risks can escalate.</p>
-  </div>
+        <!-- Maturity Assessment Section -->
+        <section id="maturity" class="snap-section service-section">
+            <div class="service-content">
+                <h2>Maturity Assessment</h2>
+                <p>
+                    Evaluate your cybersecurity posture, identify gaps, and get a roadmap for improvement.
+                </p>
+                <ul>
+                    <li>Comprehensive review of current practices</li>
+                    <li>Tailored recommendations</li>
+                    <li>Actionable insights</li>
+                </ul>
+                <a href="#technical" class="button">Next: Technical Risk Assessment</a>
+            </div>
+        </section>
 
-  <div class="content-section">
-    <h2>Our Approach</h2>
-    <p>Our assessment provides a comprehensive evaluation to help you strengthen your security framework, identify weaknesses, and implement actionable solutions.</p>
-  </div>
+        <!-- Technical Risk Assessment Section -->
+        <section id="technical" class="snap-section service-section">
+            <div class="service-content">
+                <h2>Technical Risk Assessment</h2>
+                <p>
+                    Identify vulnerabilities and mitigate risks with an in-depth technical analysis.
+                </p>
+                <ul>
+                    <li>Detailed system analysis</li>
+                    <li>Risk evaluation</li>
+                    <li>Actionable mitigation strategies</li>
+                </ul>
+                <a href="#footer-section" class="button">Contact Us</a>
+            </div>
+        </section>
 
-  <div class="content-section">
-    <h2>Key Benefits</h2>
-    <ul>
-      <li><strong>Expert-Led Analysis:</strong> Leverage deep industry expertise.</li>
-      <li><strong>Customized Action Plan:</strong> Tailored recommendations specific to your needs.</li>
-      <li><strong>Enhanced Threat Resilience:</strong> Strengthen detection and response capabilities.</li>
-    </ul>
-  </div>
-  
-</section>
+        <!-- Footer Section as a Snap Section -->
+        <section id="footer-section" class="snap-section footer-section">
+            <div class="footer-content">
+                <p>&copy; 2025 InputTrace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Cookies</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Technical Risk Assessment Section -->
-    <section id="technical" class="snap-section service-section">
-      <div class="service-content">
-        <h2>Technical Risk Assessment</h2>
-        <p>
-          Identify vulnerabilities and mitigate risks with an in-depth technical analysis.
-        </p>
-        <ul>
-          <li>Detailed system analysis</li>
-          <li>Risk evaluation</li>
-          <li>Actionable mitigation strategies</li>
-        </ul>
-        <a href="#footer-section" class="button">Contact Us</a>
-      </div>
-    </section>
-
-    <!-- Footer Section as a Snap Section -->
-    <section id="footer-section" class="snap-section footer-section">
-      <div class="footer-content">
-        <p>© 2025 InputTrace. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="#">Cookies</a>
-          <a href="#">Privacy</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Twitter</a>
-          <a href="#">YouTube</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
 
