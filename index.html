@@ -9,19 +9,18 @@
 <body>
   <!-- Fixed Header -->
   <header class="header">
-    <div class="container">
-      <div class="logo">InputTrace</div>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#maturity">Maturity Assessment</a></li>
-          <li><a href="#technical">Technical Risk Assessment</a></li>
-          <li><a href="#footer-section">Contact</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-      </nav>
+    <div class="logo">
+      <a routerLink="/" class="logo-link">Security Test Application</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#maturity">Maturity Assessment</a></li>
+        <li><a href="#technical">Technical Risk Assessment</a></li>
+        <li><a href="#footer-section">Contact</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
-  </header>
+    <app-navbar></app-navbar>
+</header>
 
   <!-- Main Scroll Container -->
   <!-- The container’s height is set to the viewport height minus the header -->
