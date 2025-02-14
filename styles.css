@@ -12,8 +12,8 @@
 html, body {
   height: 100%;
   font-family: Arial, sans-serif;
-  /* Prevent body scroll; only the scroll container scrolls */
-  overflow: hidden;
+  /* Allow scrolling for full-page navigation */
+  overflow: auto;
 }
 
 /* Fixed Header */
@@ -66,7 +66,7 @@ html, body {
 .scroll-container {
   margin-top: var(--header-height);
   height: calc(100vh - var(--header-height));
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-behavior: smooth;
 }
 
@@ -76,6 +76,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 40px 20px;
 }
 
 /* HERO SECTION */
@@ -155,7 +156,7 @@ html, body {
   margin-bottom: 10px;
 }
 
-/* Maturity Assessment Styles */
+/* Maturity Assessment Section - FIXED */
 #maturity-assessment {
   min-height: 100vh;
   display: flex;
@@ -163,8 +164,9 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #fff; /* Remove Detroit skyline image */
+  background: #fff; /* No background image */
   padding: 40px 20px;
+  width: 100%;
 }
 
 #maturity-assessment .content-section {
@@ -218,3 +220,4 @@ html, body {
     font-size: 2em;
   }
 }
+
