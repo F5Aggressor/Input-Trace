@@ -367,9 +367,10 @@ html, body {
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: ;
   background-color: rgba(0, 0, 0, 0.6); /* Subtle transparency */
   color: #ffffff;
-  padding: 5px 20px; /* Thin padding for a compact footer */
+  padding: 13px 40px; /* Thin padding for a compact footer */
   display: flex;
   justify-content: space-between; /* Space between left and right sections */
   align-items: center;
