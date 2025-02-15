@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastScrollTop = 0; // Store the last scroll position to detect scroll direction
   let scrollTimeout; // Timeout for debouncing the scroll event
 
+  // Configurable settings
+  const debounceDelay = 200; // Increased delay before snapping (adjustable)
+  const transitionDuration = 800; // Smooth transition duration in milliseconds (adjustable)
+
   container.addEventListener('scroll', () => {
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
@@ -42,33 +46,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const viewportCenter = scrollPos + containerHeight / 2; // Get center of viewport
 
         // Determine whether to stay in current section or move to next/previous
+        let targetSection = nearestSection;
         if (viewportCenter > sectionCenter) {
           if (scrollDirection === 'down' && nextSection) {
-            container.scrollTo({
-              top: nextSection.offsetTop,
-              behavior: 'smooth' // Smooth scrolling transition
-            });
-          } else {
-            container.scrollTo({
-              top: nearestSection.offsetTop,
-              behavior: 'smooth'
-            });
+            targetSection = nextSection;
           }
         } else {
           if (scrollDirection === 'up' && prevSection) {
-            container.scrollTo({
-              top: prevSection.offsetTop,
-              behavior: 'smooth'
-            });
-          } else {
-            container.scrollTo({
-              top: nearestSection.offsetTop,
-              behavior: 'smooth'
-            });
+            targetSection = prevSection;
           }
         }
+
+        // Apply smooth scrolling with configurable duration
+        container.style.scrollBehavior = 'auto'; // Disable built-in smooth behavior
+        container.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'instant' // Immediate jump, then apply transition manually
+        });
+
+        // Apply manual smooth transition
+        container.style.transition = `scroll-top ${transitionDuration}ms ease-in-out`;
+        requestAnimationFrame(() => {
+          container.scrollTop = targetSection.offsetTop;
+        });
       }
-    }, 100); // Debounce delay to prevent excessive calculations
+    }, debounceDelay); // Configurable debounce delay
   });
 });
 
